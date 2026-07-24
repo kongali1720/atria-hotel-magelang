@@ -404,22 +404,25 @@
             background: var(--accent-light);
         }
 
-        /* ===== MERMAID ===== */
+        /* ===== MERMAID - LAYOUT LR DENGAN UKURAN PAS ===== */
         .mermaid-wrap {
             background: rgba(20, 23, 30, 0.9);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 24px;
+            padding: 30px;
             overflow-x: auto;
+            overflow-y: visible;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 320px;
+            align-items: flex-start;
+            min-height: 600px;
+            width: 100%;
         }
         .mermaid-wrap svg {
             max-width: 100%;
             height: auto;
-            min-height: 220px;
+            min-height: 500px;
+            width: 100%;
         }
 
         /* ===== GANTT ===== */
@@ -766,6 +769,13 @@
                 font-size: 14px;
                 padding: 10px 14px;
             }
+            .mermaid-wrap {
+                padding: 15px;
+                min-height: 400px;
+            }
+            .mermaid-wrap svg {
+                min-height: 350px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -777,11 +787,17 @@
                 font-size: 10px;
                 padding: 6px 8px;
             }
+            .mermaid-wrap {
+                padding: 10px;
+                min-height: 350px;
+            }
+            .mermaid-wrap svg {
+                min-height: 300px;
+            }
         }
 
-        /* ===== PRINT / PDF - DIPERBAIKI ===== */
+        /* ===== PRINT / PDF ===== */
         @media print {
-            /* Sembunyikan elemen navigasi */
             .nav,
             #scrollTopBtn,
             #pdfBtn,
@@ -793,14 +809,12 @@
                 display: none !important;
             }
 
-            /* Reset semua animasi */
             .reveal {
                 opacity: 1 !important;
                 transform: none !important;
                 transition: none !important;
             }
 
-            /* Background dan warna */
             body {
                 background: #0c0e14 !important;
                 color: #eee8dc !important;
@@ -808,14 +822,12 @@
                 print-color-adjust: exact !important;
             }
 
-            /* Card */
             .card {
                 background: #1a1e26 !important;
                 border-color: rgba(200, 162, 78, 0.15) !important;
                 break-inside: avoid;
             }
 
-            /* Table */
             .tbl thead th {
                 background: rgba(200, 162, 78, 0.12) !important;
                 color: #e8cc7a !important;
@@ -824,20 +836,27 @@
                 color: #eee8dc !important;
             }
 
-            /* Scroll containers */
             .gantt-scroll,
-            .tbl-scroll,
-            .mermaid-wrap {
+            .tbl-scroll {
                 overflow: visible !important;
             }
 
-            /* Page break */
+            .mermaid-wrap {
+                overflow: visible !important;
+                min-height: auto !important;
+                padding: 20px !important;
+            }
+            .mermaid-wrap svg {
+                max-width: 100% !important;
+                height: auto !important;
+                min-height: auto !important;
+            }
+
             section {
                 page-break-inside: avoid;
                 break-inside: avoid;
             }
 
-            /* Cover contact */
             .cover-contact {
                 background: rgba(12, 14, 20, 0.9) !important;
                 border-color: rgba(200, 162, 78, 0.3) !important;
@@ -849,53 +868,39 @@
                 color: #c8a24e !important;
             }
 
-            /* Gantt bars */
             .gantt-bar {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
 
-            /* KPI values */
             .kpi-value {
                 -webkit-text-fill-color: #c8a24e !important;
             }
 
-            /* Badges */
             .badge {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
 
-            /* Budget box */
             .budget-box {
                 background: rgba(200, 162, 78, 0.1) !important;
             }
 
-            /* Highlight row */
             .highlight-row {
                 background: rgba(200, 162, 78, 0.12) !important;
             }
 
-            /* Hero image */
             .hero-img-section img {
                 max-height: 300px;
                 object-fit: cover;
             }
 
-            /* Pastikan tidak ada halaman kosong */
             .hero-img-section {
                 padding-top: 0 !important;
             }
 
-            /* Spacing */
             .section {
                 padding: 30px 20px !important;
-            }
-
-            /* Mermaid */
-            .mermaid-wrap svg {
-                max-width: 100% !important;
-                height: auto !important;
             }
         }
 
@@ -1172,9 +1177,9 @@
         </div>
     </section>
 
-    <!-- ===== ROADMAP MERMAID ===== -->
+    <!-- ===== ROADMAP MERMAID - DENGAN SINGKATAN YANG LEBIH BAIK ===== -->
     <section id="roadmap-diagram" class="py-16 sm:py-20 px-4 sm:px-6">
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-6xl mx-auto">
             <div class="text-center mb-10 sm:mb-14 reveal">
                 <p class="text-gold-400 font-medium tracking-[3px] uppercase text-[10px] sm:text-xs mb-2">Visual Map</p>
                 <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Improvement Roadmap</h2>
@@ -1182,21 +1187,33 @@
                 <p class="text-xs sm:text-sm" style="color:var(--muted);">Hubungan area perbaikan dengan kepuasan tamu</p>
             </div>
             <div class="mermaid-wrap reveal">
-                <pre class="mermaid">
-flowchart TD
-    A[Atria Hotel Magelang]
-    A --> B1(Soundproofing) --> C1(Sleep Quality)
-    A --> B2(Maintenance) --> C2(Guest Comfort)
-    A --> B3(Parking) --> C3(Arrival Experience)
-    A --> B4(Breakfast) --> C4(Culinary XP)
-    A --> B5(Food Hygiene) --> C5(Food Safety)
-    A --> B6(Complaint Handling) --> C6(Satisfaction)
-    A --> B7(WiFi) --> C7(Biz Traveler)
-    A --> B8(Smart Room) --> C8(Modern Image)
-    A --> B9(Family Facility) --> C9(Family Friendly)
-    A --> B10(Sustainability) --> C10(Green Branding)
-
-    C1 --> D[Guest Satisfaction]
+                <pre class="mermaid" style="font-size:14px;">
+flowchart LR
+    A["Atria Hotel Magelang"]
+    
+    A --> B1["Soundproofing"]
+    A --> B2["Maintenance"]
+    A --> B3["Parkir"]
+    A --> B4["Breakfast"]
+    A --> B5["Food Hygiene"]
+    A --> B6["Complaint"]
+    A --> B7["WiFi"]
+    A --> B8["Smart Room"]
+    A --> B9["Family Facility"]
+    A --> B10["Sustainability"]
+    
+    B1 --> C1["Sleep Quality"]
+    B2 --> C2["Comfort"]
+    B3 --> C3["Arrival XP"]
+    B4 --> C4["Culinary"]
+    B5 --> C5["Food Safety"]
+    B6 --> C6["Satisfaction"]
+    B7 --> C7["Biz Traveler"]
+    B8 --> C8["Modern Image"]
+    B9 --> C9["Family Friendly"]
+    B10 --> C10["Green Branding"]
+    
+    C1 --> D["Guest Satisfaction"]
     C2 --> D
     C3 --> D
     C4 --> D
@@ -1206,14 +1223,18 @@ flowchart TD
     C8 --> D
     C9 --> D
     C10 --> D
+    
+    D --> E["Higher Rating &amp; Loyalty"]
 
-    D --> E[Higher Rating &amp; Loyalty]
+    style A fill:#1a2a3a,stroke:#c8a24e,stroke-width:2px,color:#eee8dc
+    style D fill:#1a2a3a,stroke:#c8a24e,stroke-width:2px,color:#eee8dc
+    style E fill:#c8a24e,stroke:#b08a35,stroke-width:2px,color:#0c0e14
                 </pre>
             </div>
         </div>
     </section>
 
-    <!-- ===== MASTER PLAN - TANPA RENOVASI KAMAR MANDI ===== -->
+    <!-- ===== MASTER PLAN ===== -->
     <section id="master-plan" class="py-16 sm:py-20 px-4 sm:px-6" style="background:linear-gradient(180deg,rgba(200,162,78,.02),transparent)">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-10 sm:mb-14 reveal">
@@ -1503,16 +1524,19 @@ flowchart TD
                 secondaryColor: '#1a2030',
                 tertiaryColor: '#151a25',
                 fontFamily: 'Source Sans 3, sans-serif',
-                fontSize: '14px',
+                fontSize: '15px',
                 nodeTextColor: '#eee8dc',
                 nodeBorder: '#c8a24e',
-                nodePadding: '20px'
+                nodePadding: '18px',
+                labelBackground: '#14171e'
             },
             flowchart: {
                 htmlLabels: true,
                 curve: 'basis',
                 useMaxWidth: true,
-                padding: 20
+                padding: 25,
+                nodeSpacing: 45,
+                rankSpacing: 55
             }
         });
 
@@ -1646,7 +1670,7 @@ flowchart TD
         });
 
         // ============================================================
-        // TOMBOL PDF - MENGGUNAKAN WINDOW.PRINT()
+        // TOMBOL PDF
         // ============================================================
         const pdfBtn = document.getElementById('pdfBtn');
 
@@ -1685,10 +1709,9 @@ flowchart TD
         });
 
         console.log('✅ Atria Hotel Master Improvement Program Loaded!');
-        console.log('📌 Soundproofing row HIGHLIGHTED');
-        console.log('📌 Mobile menu FIXED');
-        console.log('📌 PDF menggunakan window.print()');
-        console.log('📌 Total Budget: Rp 2.040.000.000 (tanpa renovasi kamar mandi)');
+        console.log('📌 Mermaid menggunakan teks singkat - TIDAK TERPOTONG');
+        console.log('📌 "Atria Hotel Magelang" dan "Higher Rating & Loyalty" terlihat penuh');
+        console.log('📌 Total Budget: Rp 2.040.000.000');
     </script>
 
 </body>
