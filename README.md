@@ -42,6 +42,16 @@
 
 ---
 
+<div align="center">
+
+### 🌐 GitHub Pages
+
+**https://kongali1720.github.io/atria-hotel-magelang/**
+
+</div>
+
+---
+
 # 📖 Overview
 
 Welcome to the **ATRIA HOTEL MAGELANG – Strategic Operational Excellence & Business Transformation Master Plan (2026–2028)** repository.
