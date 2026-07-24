@@ -273,6 +273,10 @@
             box-shadow: 0 8px 32px var(--shadow);
             background: var(--card-hover);
         }
+        .card-glow {
+            border-color: rgba(200, 162, 78, 0.3);
+            box-shadow: 0 0 40px rgba(200, 162, 78, 0.05);
+        }
 
         /* ===== TABLES ===== */
         .tbl-scroll {
@@ -558,6 +562,18 @@
         .bar-close {
             background: linear-gradient(135deg, #c95a4f, #d67068);
         }
+        .bar-ai {
+            background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+        }
+        .bar-upskill {
+            background: linear-gradient(135deg, #ec4899, #f472b6);
+        }
+        .bar-digital {
+            background: linear-gradient(135deg, #06b6d4, #22d3ee);
+        }
+        .bar-gamification {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+        }
 
         .gantt-legend {
             display: flex;
@@ -637,6 +653,22 @@
         .badge-l {
             background: rgba(122, 125, 133, 0.15);
             color: var(--muted);
+        }
+        .badge-ai {
+            background: rgba(139, 92, 246, 0.2);
+            color: #a78bfa;
+        }
+        .badge-upskill {
+            background: rgba(236, 72, 153, 0.2);
+            color: #f472b6;
+        }
+        .badge-digital {
+            background: rgba(6, 182, 212, 0.2);
+            color: #22d3ee;
+        }
+        .badge-gamification {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
         }
 
         @keyframes bounce-d {
@@ -936,6 +968,7 @@
                 <a href="#jadwal" class="nav-link">Jadwal</a>
                 <a href="#gantt-section" class="nav-link">Gantt</a>
                 <a href="#kpi" class="nav-link">KPI</a>
+                <a href="#innovation" class="nav-link">Inovasi</a>
             </div>
             <button id="mobileMenuBtn" class="lg:hidden" aria-label="Menu">
                 <i class="fas fa-bars"></i>
@@ -949,6 +982,7 @@
             <a href="#jadwal" class="nav-link">Jadwal</a>
             <a href="#gantt-section" class="nav-link">Gantt</a>
             <a href="#kpi" class="nav-link">KPI</a>
+            <a href="#innovation" class="nav-link">Inovasi</a>
         </div>
     </nav>
 
@@ -1177,7 +1211,7 @@
         </div>
     </section>
 
-    <!-- ===== ROADMAP MERMAID - DENGAN SINGKATAN YANG LEBIH BAIK ===== -->
+    <!-- ===== ROADMAP MERMAID ===== -->
     <section id="roadmap-diagram" class="py-16 sm:py-20 px-4 sm:px-6">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-10 sm:mb-14 reveal">
@@ -1405,6 +1439,127 @@ flowchart TD
         </div>
     </section>
 
+    <!-- ============================================================ -->
+    <!-- ===== SECTION INOVASI BARU ===== -->
+    <!-- ============================================================ -->
+    <section id="innovation" class="py-16 sm:py-20 px-4 sm:px-6" style="background:linear-gradient(180deg,rgba(139,92,246,0.03),rgba(6,182,212,0.03))">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10 sm:mb-14 reveal">
+                <p class="text-gold-400 font-medium tracking-[3px] uppercase text-[10px] sm:text-xs mb-2">Future Ready</p>
+                <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Inovasi &amp; Strategi Modern</h2>
+                <div class="gold-line mx-auto mb-3"></div>
+                <p class="text-xs sm:text-sm" style="color:var(--muted);">Empat ide cemerlang untuk membawa Atria Hotel ke level berikutnya</p>
+            </div>
+
+            <!-- ===== IDEA 1: AI SENTIMENT ANALYZER ===== -->
+            <div class="card card-glow p-6 sm:p-8 mb-6 reveal" style="border-left:4px solid #8b5cf6;">
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(139,92,246,0.15);">
+                        <i class="fas fa-robot text-2xl" style="color:#a78bfa;"></i>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap items-center gap-3 mb-2">
+                            <h3 class="text-lg sm:text-xl font-bold text-gold-300">AI-Powered Sentiment Analyzer</h3>
+                            <span class="badge badge-ai">AI &amp; Big Data</span>
+                        </div>
+                        <p class="text-sm" style="color:var(--muted);">
+                            Integrasikan dashboard otomatis yang <strong class="text-gold-300">menarik dan menganalisis ulasan tamu</strong> dari Google Reviews, TripAdvisor, Agoda, dan Booking.com secara real-time. Manajemen dapat melihat <strong class="text-gold-300">sentimen harian</strong> terkait kebersihan, kecepatan front office, atau kualitas sarapan — sehingga tindakan korektif bisa langsung diambil tanpa menunggu laporan bulanan.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mt-3 text-xs" style="color:var(--muted);">
+                            <span><i class="fas fa-check-circle text-gold-400 mr-1"></i> Real-time monitoring</span>
+                            <span><i class="fas fa-check-circle text-gold-400 mr-1"></i> Early warning system</span>
+                            <span><i class="fas fa-check-circle text-gold-400 mr-1"></i> Data-driven decision</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== IDEA 2: CROSS-DEPARTMENTAL UPSKILLING ===== -->
+            <div class="card card-glow p-6 sm:p-8 mb-6 reveal reveal-d1" style="border-left:4px solid #ec4899;">
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(236,72,153,0.15);">
+                        <i class="fas fa-people-arrows text-2xl" style="color:#f472b6;"></i>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap items-center gap-3 mb-2">
+                            <h3 class="text-lg sm:text-xl font-bold text-gold-300">Cross-Departmental Upskilling</h3>
+                            <span class="badge badge-upskill">HR &amp; Training</span>
+                        </div>
+                        <p class="text-sm" style="color:var(--muted);">
+                            Program <strong class="text-gold-300">rotasi internal &amp; pelatihan silang</strong> antar departemen. Staf Front Office memahami dasar Housekeeping, staf F&amp;B Service mengenal operasional dapur, dan sebagainya. Nilai tambah: <strong class="text-gold-300">fleksibilitas operasional</strong> saat peak season, serta jenjang karir yang lebih luas bagi karyawan (multi-skilling).
+                        </p>
+                        <div class="flex flex-wrap gap-4 mt-3 text-xs" style="color:var(--muted);">
+                            <span><i class="fas fa-check-circle text-gold-400 mr-1"></i> Fleksibilitas SDM</span>
+                            <span><i class="fas fa-check-circle text-gold-400 mr-1"></i> Retensi karyawan</span>
+                            <span><i class="fas fa-check-circle text-gold-400 mr-1"></i> Career growth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== IDEA 3: DIGITAL CONCIERGE ===== -->
+            <div class="card card-glow p-6 sm:p-8 mb-6 reveal reveal-d2" style="border-left:4px solid #06b6d4;">
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(6,182,212,0.15);">
+                        <i class="fas fa-qrcode text-2xl" style="color:#22d3ee;"></i>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap items-center gap-3 mb-2">
+                            <h3 class="text-lg sm:text-xl font-bold text-gold-300">Digital Concierge &amp; Smart QR</h3>
+                            <span class="badge badge-digital">Digital &amp; ESG</span>
+                        </div>
+                        <p class="text-sm" style="color:var(--muted);">
+                            Gantikan buku direktori fisik dengan <strong class="text-gold-300">QR Code di setiap kamar</strong>. Tamu bisa memesan room service, meminta tambahan amenities, melihat rekomendasi wisata Magelang (Candi Borobudur, Punthuk Setumbu), hingga memberikan ulasan langsung secara digital. Sejalan dengan pilar <strong class="text-gold-300">Sustainability &amp; ESG</strong> karena mengurangi penggunaan kertas.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mt-3 text-xs" style="color:var(--muted);">
+                            <span><i class="fas fa-check-circle text-gold-400 mr-1"></i> Paperless operation</span>
+                            <span><i class="fas fa-check-circle text-gold-400 mr-1"></i> Enhanced guest experience</span>
+                            <span><i class="fas fa-check-circle text-gold-400 mr-1"></i> Local tourism promotion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== IDEA 4: GAMIFICATION KPI ===== -->
+            <div class="card card-glow p-6 sm:p-8 mb-6 reveal reveal-d3" style="border-left:4px solid #f59e0b;">
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(245,158,11,0.15);">
+                        <i class="fas fa-gamepad text-2xl" style="color:#fbbf24;"></i>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap items-center gap-3 mb-2">
+                            <h3 class="text-lg sm:text-xl font-bold text-gold-300">Staff Performance Gamification</h3>
+                            <span class="badge badge-gamification">Motivation &amp; Reward</span>
+                        </div>
+                        <p class="text-sm" style="color:var(--muted);">
+                            Terapkan sistem <strong class="text-gold-300">poin &amp; reward bulanan</strong> yang transparan berdasarkan pencapaian metrik di Balanced Scorecard. Setiap departemen mendapat skor, dan staf dengan performa terbaik mendapatkan insentif. Nilai tambah: <strong class="text-gold-300">motivasi kompetitif sehat</strong> yang berdampak langsung pada peningkatan Guest Satisfaction Score.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mt-3 text-xs" style="color:var(--muted);">
+                            <span><i class="fas fa-check-circle text-gold-400 mr-1"></i> Transparansi performa</span>
+                            <span><i class="fas fa-check-circle text-gold-400 mr-1"></i> Competitive spirit</span>
+                            <span><i class="fas fa-check-circle text-gold-400 mr-1"></i> Higher GSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SUMMARY BOX ===== -->
+            <div class="budget-box p-6 sm:p-8 text-center reveal" style="border-color:rgba(200,162,78,0.3);">
+                <p class="text-[10px] sm:text-xs uppercase tracking-[3px] mb-2" style="color:var(--muted);">Fase Lanjutan — Strategi Modern</p>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-gold-400">Phase 2: Innovation &amp; Digital Transformation</h3>
+                <p class="text-xs sm:text-sm mt-2" style="color:var(--muted); max-width:600px; margin:0 auto;">
+                    Keempat ide di atas dapat diimplementasikan sebagai <strong class="text-gold-300">sub-inisiatif baru</strong> setelah program dasar (Phase 1) selesai, atau diintegrasikan secara paralel untuk akselerasi transformasi hotel.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3 mt-4">
+                    <span class="badge badge-ai">AI Sentiment</span>
+                    <span class="badge badge-upskill">Upskilling</span>
+                    <span class="badge badge-digital">Digital Concierge</span>
+                    <span class="badge badge-gamification">Gamification</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== KPI ===== -->
     <section id="kpi" class="py-16 sm:py-20 px-4 sm:px-6" style="background:linear-gradient(180deg,rgba(200,162,78,.02),transparent)">
         <div class="max-w-5xl mx-auto">
@@ -1490,6 +1645,7 @@ flowchart TD
                 <span class="flex items-center gap-1.5 text-[10px] sm:text-xs" style="color:var(--muted);"><span class="dot dot-high" style="width:7px;height:7px"></span>Prioritas Tinggi</span>
                 <span class="flex items-center gap-1.5 text-[10px] sm:text-xs" style="color:var(--muted);"><span class="dot dot-med" style="width:7px;height:7px"></span>Prioritas Sedang</span>
                 <span class="flex items-center gap-1.5 text-[10px] sm:text-xs" style="color:var(--muted);"><span class="dot dot-low" style="width:7px;height:7px"></span>Prioritas Rendah</span>
+                <span class="flex items-center gap-1.5 text-[10px] sm:text-xs" style="color:var(--muted);"><span class="dot" style="width:7px;height:7px;background:#8b5cf6;box-shadow:0 0 8px rgba(139,92,246,0.4);"></span>Inovasi</span>
             </div>
             <p class="text-[10px]" style="color:rgba(122,125,133,.4);">Dokumen ini disusun untuk keperluan evaluasi internal. Angka biaya bersifat estimasi.</p>
         </div>
@@ -1712,6 +1868,11 @@ flowchart TD
         console.log('📌 Mermaid menggunakan teks singkat - TIDAK TERPOTONG');
         console.log('📌 "Atria Hotel Magelang" dan "Higher Rating & Loyalty" terlihat penuh');
         console.log('📌 Total Budget: Rp 2.040.000.000');
+        console.log('🚀 4 Inovasi Modern telah ditambahkan:');
+        console.log('   1. AI-Powered Sentiment Analyzer');
+        console.log('   2. Cross-Departmental Upskilling');
+        console.log('   3. Digital Concierge & Smart QR');
+        console.log('   4. Staff Performance Gamification');
     </script>
 
 </body>
